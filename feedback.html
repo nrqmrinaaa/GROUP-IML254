@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Feedback</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your external CSS -->
+</head>
+<body>
+<!-- Menu Button -->
+<div class="menu-toggle" onclick="toggleMenu()">☰ </div>
+
+<!-- Sidebar Navigation (Hidden by Default) -->
+<aside class="sidebar">
+    <div class="close-btn" onclick="toggleMenu()">✖</div> <!-- Close Button -->
+
+    <ul class="nav-menu">
+        <li><a href="index.html" target="_blank">HOME</a></li>
+        <li><a href="aboutus.html" target="_blank">ABOUT US</a></li>
+
+        <li class="dropdown">
+            <a href="bouquet.html" target="_blank">BOUQUET ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="freshflower.html" target="_blank">Fresh Flower</a></li>
+                <li><a href="balloonflower.html" target="_blank">Balloon Flower</a></li>
+                <li><a href="crochet.html" target="_blank">Crochet</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="events.html" target="_blank">EVENT ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="wedding.html" target="_blank">Wedding</a></li>
+                <li><a href="birthday.html" target="_blank">Birthday</a></li>
+                <li><a href="babyshower.html" target="_blank">Baby Shower</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="giftaccessories.html" target="_blank">GIFT & ACCESSORIES ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="vase.html" target="_blank">Vase</a></li>
+                <li><a href="gift.html" target="_blank">Gift</a></li>
+                <li><a href="addon.html" target="_blank">Add On</a></li>
+            </ul>
+        </li>
+
+        <li><a href="shop.html" target="_blank">SHOP</a></li>
+        <li><a href="specialoccasions.html" target="_blank">SPECIAL OCCASIONS</a></li>
+        <li><a href="customization.html" target="_blank">CUSTOMIZATION</a></li>
+        <li><a href="subscription.html" target="_blank">SUBSCRIPTION</a></li>
+        <li><a href="seasonaloffers.html" target="_blank">SEASONAL OFFERS</a></li>
+        <li><a href="feedback.html" target="_blank">CUSTOMER FEEDBACK</a></li>
+        <li><a href="faq.html" target="_blank">FAQ</a></li>
+        <li><a href="contact.html" target="_blank">CONTACT</a></li>
+        <li><a href="group.html" target="_blank">GROUP</a></li>
+    </ul>
+</aside>
+
+<script>
+    function toggleMenu() {
+        var sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("open"); // Add or remove 'open' class
+    }
+</script>
+
+
+
+    <section id="feedback">
+        <h2>Customer Feedback</h2>
+        <form id="feedback-form">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="message">Your Feedback:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit">Submit Feedback</button>
+        </form>
+        <div id="feedback-list"></div>
+    </section>
+
+    <script>
+        // JavaScript to handle the form submission (if needed)
+        document.getElementById('feedback-form').addEventListener('submit', function(e) {
+            e.preventDefault(); // Prevent form from refreshing the page
+
+            const name = document.getElementById('name').value;
+            const message = document.getElementById('message').value;
+
+            const feedbackList = document.getElementById('feedback-list');
+            const newFeedback = document.createElement('div');
+            newFeedback.innerHTML = `<strong>${name}</strong>: <p>${message}</p>`;
+            feedbackList.appendChild(newFeedback);
+
+            // Reset the form after submission
+            document.getElementById('feedback-form').reset();
+        });
+    </script>
+<footer>
+    <p>&copy; 2025 Flower Shop. All rights reserved.</p>
+    <p>Follow us on: <a href="https://www.instagram.com/bloomyourdayswithus?igsh=MWlieXU2dGRkYjk1cA%3D%3D&utm_source=qr" target="_blank"">Instagram</a> | <a href="#">Facebook</a></p>
+</footer>
+
+<button id="back-to-top">&#8679; Back to Top</button>
+
+<script>
+    const backToTopButton = document.getElementById("back-to-top");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+
+</body>
+</html>

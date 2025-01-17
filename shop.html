@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the CSS file -->
+</head>
+<body>
+<!-- Menu Button -->
+<div class="menu-toggle" onclick="toggleMenu()">☰ </div>
+
+<!-- Sidebar Navigation (Hidden by Default) -->
+<aside class="sidebar">
+    <div class="close-btn" onclick="toggleMenu()">✖</div> <!-- Close Button -->
+
+    <ul class="nav-menu">
+        <li><a href="index.html" target="_blank">HOME</a></li>
+        <li><a href="aboutus.html" target="_blank">ABOUT US</a></li>
+
+        <li class="dropdown">
+            <a href="bouquet.html" target="_blank">BOUQUET ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="freshflower.html" target="_blank">Fresh Flower</a></li>
+                <li><a href="balloonflower.html" target="_blank">Balloon Flower</a></li>
+                <li><a href="crochet.html" target="_blank">Crochet</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="events.html" target="_blank">EVENT ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="wedding.html" target="_blank">Wedding</a></li>
+                <li><a href="birthday.html" target="_blank">Birthday</a></li>
+                <li><a href="babyshower.html" target="_blank">Baby Shower</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="giftaccessories.html" target="_blank">GIFT & ACCESSORIES ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="vase.html" target="_blank">Vase</a></li>
+                <li><a href="gift.html" target="_blank">Gift</a></li>
+                <li><a href="addon.html" target="_blank">Add On</a></li>
+            </ul>
+        </li>
+
+        <li><a href="shop.html" target="_blank">SHOP</a></li>
+        <li><a href="specialoccasions.html" target="_blank">SPECIAL OCCASIONS</a></li>
+        <li><a href="customization.html" target="_blank">CUSTOMIZATION</a></li>
+        <li><a href="subscription.html" target="_blank">SUBSCRIPTION</a></li>
+        <li><a href="seasonaloffers.html" target="_blank">SEASONAL OFFERS</a></li>
+        <li><a href="feedback.html" target="_blank">CUSTOMER FEEDBACK</a></li>
+        <li><a href="faq.html" target="_blank">FAQ</a></li>
+        <li><a href="contact.html" target="_blank">CONTACT</a></li>
+        <li><a href="group.html" target="_blank">GROUP</a></li>
+    </ul>
+</aside>
+
+<script>
+    function toggleMenu() {
+        var sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("open"); // Add or remove 'open' class
+    }
+</script>
+
+
+<section id="shop">
+    <h2>GET YOURS HERE!</h2>
+    <div class="product-container">
+        <div class="product">
+            <img src="image/fresh2.jpg" alt="Aurora Bouquet">
+            <h3>Aurora Bouquet</h3>
+            <p>A beautiful bouquet of fresh roses, perfect for any occasion.</p>
+            <button class="add-to-cart" data-item="Aurora Bouquet" data-price="30.00">Add to Cart - RM30.00</button>
+        </div>
+        <div class="product">
+            <img src="image/fresh3.jpg" alt="Hanna Bouquet">
+            <h3>Hanna Bouquet</h3>
+            <p>Fresh tulips to brighten up any room or event.</p>
+            <button class="add-to-cart" data-item="Hanna Bouquet" data-price="25.00">Add to Cart - RM25.00</button>
+        </div>
+        <div class="product">
+            <img src="image/fresh4.jpg" alt="SnowWhite Bouquet">
+            <h3>SnowWhite Bouquet</h3>
+            <p>Elegant lilies to add sophistication to your home or event.</p>
+            <button class="add-to-cart" data-item="SnowWhite Bouquet" data-price="35.00">Add to Cart - RM35.00</button>
+        </div>
+        <div class="product">
+            <img src="image/balloon2.jpg" alt="Beauty Bouquet">
+            <h3>Beauty Bouquet</h3>
+            <p>Exotic orchids for a unique and luxurious gift.</p>
+            <button class="add-to-cart" data-item="Beauty Bouquet" data-price="40.00">Add to Cart - RM40.00</button>
+        </div>
+        <div class="product">
+            <img src="image/balloon3.jpg" alt="Peach Bouquet">
+            <h3>Peach Bouquet</h3>
+            <p>Bright and cheerful sunflowers to bring sunshine into any space.</p>
+            <button class="add-to-cart" data-item="Peach Bouquet" data-price="20.00">Add to Cart - RM20.00</button>
+        </div>
+        <div class="product">
+            <img src="image/balloon4.jpg" alt="Rainbow Bouquet">
+            <h3>Rainbow Bouquet</h3>
+            <p>A colorful and vibrant mix of seasonal flowers for any occasion.</p>
+            <button class="add-to-cart" data-item="Rainbow Bouquet" data-price="28.00">Add to Cart - RM28.00</button>
+        </div>
+        <div class="product">
+            <img src="image/crochet2.jpg" alt="Daisy Bouquet">
+            <h3>Daisy Bouquet</h3>
+            <p>Cheerful and fresh daisies, perfect for brightening up any room.</p>
+            <button class="add-to-cart" data-item="Daisy Bouquet" data-price="22.00">Add to Cart - RM22.00</button>
+        </div>
+        <div class="product">
+            <img src="image/crochet3.jpg" alt="Bear Bouquet">
+            <h3>Bear Bouquet</h3>
+            <p>Luxurious peonies, perfect for weddings or special occasions.</p>
+            <button class="add-to-cart" data-item="Bear Bouquet" data-price="45.00">Add to Cart - RM45.00</button>
+        </div>
+        <div class="product">
+            <img src="image/crochet4.jpg" alt="Lavender Bouquet">
+            <h3>Lavender Bouquet</h3>
+            <p>Colorful carnations, a classic gift for any celebration.</p>
+            <button class="add-to-cart" data-item="Lavender Bouquet" data-price="30.00">Add to Cart - RM30.00</button>
+        </div>
+    </div>
+    <button id="view-cart" style="margin-top: 20px;">View Cart</button>
+</section>
+
+<script>
+    // Cart object to store items
+    const cart = {};
+
+    // Add event listeners to all "Add to Cart" buttons
+    document.querySelectorAll(".add-to-cart").forEach(button => {
+        button.addEventListener("click", function () {
+            const itemName = this.getAttribute("data-item");
+            const itemPrice = parseFloat(this.getAttribute("data-price"));
+
+            // Check if item already exists in cart
+            if (cart[itemName]) {
+                cart[itemName].quantity += 1;
+            } else {
+                cart[itemName] = {
+                    price: itemPrice,
+                    quantity: 1
+                };
+            }
+
+            // Show confirmation
+            alert(`${itemName} has been added to your cart!`);
+        });
+    });
+
+    // Event listener for "View Cart" button
+    document.getElementById("view-cart").addEventListener("click", function () {
+        if (Object.keys(cart).length === 0) {
+            alert("Your cart is empty.");
+            return;
+        }
+
+        // Display cart summary
+        let summary = "Your Cart:\n";
+        let total = 0;
+
+        for (let item in cart) {
+            const { price, quantity } = cart[item];
+            summary += `- ${item} (x${quantity}): RM${(price * quantity).toFixed(2)}\n`;
+            total += price * quantity;
+        }
+
+        summary += `\nTotal: RM${total.toFixed(2)}`;
+        alert(summary);
+    });
+</script>
+
+<footer>
+    <p>&copy; 2025 Flower Shop. All rights reserved.</p>
+    <p>Follow us on: <a href="https://www.instagram.com/bloomyourdayswithus?igsh=MWlieXU2dGRkYjk1cA%3D%3D&utm_source=qr" target="_blank"">Instagram</a> | <a href="#">Facebook</a></p>
+</footer>
+
+<button id="back-to-top">&#8679; Back to Top</button>
+
+<script>
+    const backToTopButton = document.getElementById("back-to-top");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+
+</body>
+</html>

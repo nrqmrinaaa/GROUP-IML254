@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fresh Flower Collection</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to your CSS file -->
+</head>
+<body>
+<!-- Menu Button -->
+<div class="menu-toggle" onclick="toggleMenu()">☰ </div>
+
+<!-- Sidebar Navigation (Hidden by Default) -->
+<aside class="sidebar">
+    <div class="close-btn" onclick="toggleMenu()">✖</div> <!-- Close Button -->
+
+    <ul class="nav-menu">
+        <li><a href="index.html" target="_blank">HOME</a></li>
+        <li><a href="aboutus.html" target="_blank">ABOUT US</a></li>
+
+        <li class="dropdown">
+            <a href="bouquet.html" target="_blank">BOUQUET ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="freshflower.html" target="_blank">Fresh Flower</a></li>
+                <li><a href="balloonflower.html" target="_blank">Balloon Flower</a></li>
+                <li><a href="crochet.html" target="_blank">Crochet</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="events.html" target="_blank">EVENT ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="wedding.html" target="_blank">Wedding</a></li>
+                <li><a href="birthday.html" target="_blank">Birthday</a></li>
+                <li><a href="babyshower.html" target="_blank">Baby Shower</a></li>
+            </ul>
+        </li>
+
+        <li class="dropdown">
+            <a href="giftaccessories.html" target="_blank">GIFT & ACCESSORIES ▼</a>
+            <ul class="dropdown-menu">
+                <li><a href="vase.html" target="_blank">Vase</a></li>
+                <li><a href="gift.html" target="_blank">Gift</a></li>
+                <li><a href="addon.html" target="_blank">Add On</a></li>
+            </ul>
+        </li>
+
+        <li><a href="shop.html" target="_blank">SHOP</a></li>
+        <li><a href="specialoccasions.html" target="_blank">SPECIAL OCCASIONS</a></li>
+        <li><a href="customization.html" target="_blank">CUSTOMIZATION</a></li>
+        <li><a href="subscription.html" target="_blank">SUBSCRIPTION</a></li>
+        <li><a href="seasonaloffers.html" target="_blank">SEASONAL OFFERS</a></li>
+        <li><a href="feedback.html" target="_blank">CUSTOMER FEEDBACK</a></li>
+        <li><a href="faq.html" target="_blank">FAQ</a></li>
+        <li><a href="contact.html" target="_blank">CONTACT</a></li>
+
+    </ul>
+</aside>
+
+<script>
+    function toggleMenu() {
+        var sidebar = document.querySelector(".sidebar");
+        sidebar.classList.toggle("open"); // Add or remove 'open' class
+    }
+</script>
+
+
+    <section id="fresh-flower">
+        <center><h2>Fresh Flower Collection</h2></center>
+        <center><p>Experience the beauty and fragrance of our freshly cut flowers, perfect for enhancing your home or gifting on special occasions.</p></center>
+        
+        <div class="product">
+            <img src="image/fresh1.jpg" alt="Fresh Flower 1">
+            <h3>Sweet Bouquet</h3>
+            <p>A stunning bouquet of freshly cut roses in vibrant colors.</p>
+        </div>
+        
+        <div class="product">
+            <img src="image/fresh2.jpg" alt="Fresh Flower 2">
+            <h3>Elegant Bouquet</h3>
+            <p>Beautifully arranged tulips, ideal for any occasion.</p>
+        </div>
+        
+        <div class="product">
+            <img src="image/fresh3.jpg" alt="Fresh Flower 3">
+            <h3>Seasonal Bouquet</h3>
+            <p>An assortment of seasonal flowers, freshly picked and arranged.</p>
+        </div>
+    </section>
+<footer>
+    <p>&copy; 2025 Flower Shop. All rights reserved.</p>
+    <p>Follow us on: <a href="https://www.instagram.com/bloomyourdayswithus?igsh=MWlieXU2dGRkYjk1cA%3D%3D&utm_source=qr" target="_blank"">Instagram</a> | <a href="#">Facebook</a></p>
+</footer>
+
+<button id="back-to-top">&#8679; Back to Top</button>
+
+<script>
+    const backToTopButton = document.getElementById("back-to-top");
+
+    window.onscroll = function () {
+        if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+            backToTopButton.style.display = "block";
+        } else {
+            backToTopButton.style.display = "none";
+        }
+    };
+
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+</body>
+</html>

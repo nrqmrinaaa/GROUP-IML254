@@ -1,0 +1,448 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f1eb; /* Light brown nude background */
+    color: #4d3c2e; /* Deep brown text */
+    margin: 0;
+    padding: 0;
+}
+
+/* Menu Button (☰ Open Menu) */
+.menu-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, 0.6); /* Transparent White */
+    color: #333; /* Dark Gray for Contrast */
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1000;
+    transition: 0.3s;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar (Hidden by Default) */
+.sidebar {
+    position: fixed;
+    left: -250px; /* Hidden */
+    top: 0;
+    width: 220px; /* Smaller Width */
+    height: 100vh;
+    background: rgba(255, 255, 255, 0.9); /* Transparent White */
+    padding-top: 20px;
+    transition: 0.3s;
+    overflow-y: auto;
+    border-right: 2px solid rgba(0, 0, 0, 0.1); /* Subtle Gray Border */
+    backdrop-filter: blur(10px); /* Soft Blur Effect */
+}
+
+/* When Sidebar is Open */
+.sidebar.open {
+    left: 0;
+}
+
+/* Close Button */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* Sidebar Menu List */
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.nav-menu li {
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 1em;
+    font-weight: bold;
+    display: block;
+}
+
+/* Dropdown Menu */
+.nav-menu .dropdown-menu {
+    display: none;
+    list-style: none;
+    padding-left: 20px;
+    background: rgba(255, 255, 255, 0.7); /* Lighter Transparent White */
+}
+
+/* Show Dropdown on Hover */
+.nav-menu .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Hover Effects */
+.nav-menu li:hover {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+/* Responsive for Small Screens */
+@media screen and (max-width: 768px) {
+    .menu-toggle {
+        font-size: 18px;
+        padding: 8px 12px;
+    }
+
+    .sidebar {
+        width: 200px;
+    }
+}
+
+
+/* Header Styles */
+header {
+    background-color: #c8b6a6; /* Soft brown nude header */
+    padding: 20px;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 50px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+}
+
+header ul li {
+    margin-left: 20px;
+    position: relative;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #4d3c2e;
+    font-weight: bold;
+}
+
+header ul li ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #c8b6a6;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+header ul li:hover ul {
+    display: block;
+}
+
+header ul li ul li {
+    margin: 5px 0;
+}
+
+header ul li ul li a {
+    color: #4d3c2e;
+}
+
+header ul li ul li a:hover {
+    color: #c89b6a; /* Lighter brown for hover */
+}
+
+
+/* Home Section */
+#home {
+    text-align: center;
+    padding: 50px;
+    background-color: #e6d9cb; /* Subtle light brown background */
+}
+
+#home h1 {
+    color: #7a5c3b; /* Warm brown */
+}
+
+#home p {
+    font-size: 1.2em;
+}
+
+#about {
+    text-align: center;
+    padding: 50px;
+    background-color: #f5f1eb;
+    border-radius: 10px;
+}
+
+#about h2 {
+    color: #7a5c3b;
+}
+
+#about p {
+    font-size: 1.2em;
+    color: #5a3e26;
+    max-width: 800px;
+    margin: 10px auto;
+    line-height: 1.6;
+}
+
+
+/* Product Section */
+.product {
+    margin: 20px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    margin-bottom: 15px;
+}
+
+.product h3 {
+    color: #7a5c3b; /* Warm brown for product name */
+    font-size: 1.5em;
+}
+
+.product button {
+    background-color: #7a5c3b; /* Deep brown for button */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.product button:hover {
+    background-color: #5a3e26; /* Darker brown for hover */
+}
+
+/* Shop Section */
+#shop {
+    text-align: center; /* Center-align the whole section */
+    padding: 40px 0;
+    background-color: #f5f1eb; /* Nude background */
+}
+
+#shop h2 {
+    font-size: 2.5em;
+    color: #7a5c3b; /* Warm brown */
+    margin-bottom: 20px; /* Space between title and grid */
+}
+
+
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #7a5c3b;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    display: none;
+}
+
+#back-to-top:hover {
+    background-color: #5a3e26;
+}
+
+/* Styling for Subscription and Custom Order Buttons */
+.subscribe-btn, #custom-order-btn {
+    background-color: #7a5c3b; /* Brown Nude Color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.subscribe-btn:hover, #custom-order-btn:hover {
+    background-color: #5a4428; /* Darker Brown */
+}
+
+/* Styling for success messages */
+#subscription-message, #custom-order-message {
+    font-size: 16px;
+    margin-top: 10px;
+    padding: 5px 15px;
+    border-radius: 3px;
+    background-color: #f0f8e4; /* Light Green Background for Success */
+}
+
+/* General Section Styling */
+section {
+    text-align: center;
+    padding: 40px;
+    background-color: #f5f1eb;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+section h2 {
+    color: #7a5c3b;
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    font-size: 1.2em;
+    color: #5a3e26;
+    margin: 5px 0;
+}
+
+/* FAQ Styling */
+details {
+    background: white;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+
+details summary {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #7a5c3b;
+}
+
+details p {
+    padding-top: 5px;
+    font-size: 1em;
+    color: #5a3e26;
+}
+
+/* Buttons */
+button {
+    background-color: #7a5c3b;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: #5a3e26;
+}
+
+/* Footer Styles */
+footer {
+    background-color: #c8b6a6; /* Soft brown nude footer */
+    padding: 20px;
+    text-align: center;
+}
+
+footer a {
+    color: #4d3c2e;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #c89b6a; /* Lighter brown for hover */
+}
+
+/* Shop Section - Align Products */
+#shop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px;
+    background-color: #f5f1eb; /* Light brown background for the shop */
+}
+
+/* Product container for responsiveness */
+.product {
+    margin: 20px;
+    width: calc(33% - 40px);
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 480px) {
+    .product {
+        width: 100%;
+    }
+}
+
+#feedback {
+    text-align: center;
+    background-color: #f5f1eb;
+    padding: 40px 0;
+    border-radius: 10px;
+}
+
+#feedback h2 {
+    color: #7a5c3b;
+}
+
+#feedback-form {
+    width: 50%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#feedback-form input, 
+#feedback-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#feedback-form button {
+    background-color: #7a5c3b;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#feedback-form button:hover {
+    background-color: #5a3e26;
+}
+
+#feedback-list {
+    margin-top: 20px;
+}
+
